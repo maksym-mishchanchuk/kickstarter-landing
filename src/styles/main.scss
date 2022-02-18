@@ -2,6 +2,21 @@
 @import "fonts";
 @import "typography";
 
-body {
-  background: $c-gray;
-}
+@import "reset";
+@import "normalize";
+
+@import "./blocks/grid";
+@import "./blocks/page";
+@import "./blocks/header";
+@import "./blocks/nav";
+@import "./blocks/nav-desktop";
+@import "./blocks/nav-mobile";
+@import "./blocks/card-container";
+@import "./blocks/card";
+@import "./blocks/presentation";
+@import "./blocks/technology";
+
+@import "./blocks/features";
+@import "./blocks/property";
+@import "./blocks/testimonials";
+@import "./blocks/footer";

@@ -1,0 +1,59 @@
+@import "../utils/vars";
+@import "../utils/mixins";
+
+.card {
+  flex-basis: 276px;
+
+  @include onTablet {
+    flex-basis: 47%;
+    gap: 20px;
+  }
+
+  @include onMobile {
+    flex-basis: 100%;
+  }
+
+  :last-child {
+    margin-right: 0;
+  }
+
+  &__svg {
+    display: block;
+    margin: 0 auto 47px;
+
+    @include onMobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 50px;
+    font-family: DIN-pro-medium, sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+
+    @include onTablet {
+      margin-bottom: 20px;
+    }
+
+    @include onMobile {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__text {
+    &__p {
+      text-align: center;
+      font-size: 14px;
+      line-height: 21px;
+      color: $color-text-card;
+    }
+  }
+}

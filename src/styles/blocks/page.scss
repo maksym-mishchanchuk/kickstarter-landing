@@ -1,0 +1,24 @@
+@import "../utils/vars";
+
+.page {
+
+  &__body--with-menu {
+    overflow: hidden;
+  }
+
+  &__nav-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    padding-top: 18px;
+    background-color: $main-bg-color;
+
+    &:target {
+      transform: translate(0);
+    }
+  }
+}

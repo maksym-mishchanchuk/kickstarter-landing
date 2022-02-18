@@ -1,0 +1,122 @@
+@import "../utils/vars";
+@import "../utils/mixins";
+
+.nav {
+
+  @include onMobile {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    text-decoration: none;
+
+    &--specs {
+      font-size: 14px;
+      line-height: 17px;
+      border-radius: 5px;
+      padding: 2px;
+      color: #4f4f4f;
+
+      &:hover {
+        color: red;
+        box-shadow: 0 7px 14px #999;
+      }
+    }
+
+    &--eng {
+      font-size: 14px;
+      line-height: 18px;
+      color: #333;
+
+      &:hover {
+        color: $green-color;
+      }
+    }
+
+    &--ua {
+      font-size: 14px;
+      line-height: 18px;
+      color: #828282;
+
+      &:hover {
+        color: $green-color;
+      }
+    }
+
+    &--button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color: #333;
+      color: $white-color;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: $white-color;
+        color: #333;
+        box-shadow: 0 10px 20px #999;
+      }
+    }
+
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    box-sizing: border-box;
+
+    @include onMobile {
+      display: none;
+    }
+
+    &__item {
+      box-sizing: border-box;
+
+      &:first-child {
+        width: 72px;
+        height: 21px;
+        margin-right: 12px;
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      &:nth-child(2) {
+        margin-right: 37px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      &:last-child {
+        width: 102px;
+        height: 48px;
+      }
+
+      &__button {
+        width: 100%;
+        height: 100%;
+        background: #333;
+        padding: 0;
+        border: none;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    :active {
+      opacity: 0;
+    }
+
+    @include onMobile {
+      display: block;
+    }
+  }
+}

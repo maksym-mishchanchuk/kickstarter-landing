@@ -1,0 +1,87 @@
+@import "../utils/vars";
+@import "../utils/mixins";
+
+.features {
+  margin-bottom: 188px;
+
+  @include onMobile {
+    margin-bottom: 45px;
+  }
+
+  .container {
+    max-width: 1194px;
+    padding: 0 35px;
+    margin: 0 auto;
+  }
+
+  &__background {
+    background-image: url("../images/music-optavity.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+
+    @include onMobile {
+      background-image: none;
+    }
+  }
+
+  &__block {
+
+    &--1 {
+      padding-bottom: 25px;
+    }
+    &--2 {
+      margin-bottom: 129px;
+
+      @include onTablet {
+        margin-bottom: 78px;
+      }
+
+      @include onMobile {
+        margin-bottom: 51px;
+      }
+    }
+  }
+
+  &__arrows {
+    display: none;
+
+    @include onMobile {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    @include onTablet {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__title__h4 {
+    font-family: DIN-pro-medium, sans-serif;
+    font-size: 56px;
+    line-height: 70px;
+    color: #333;
+
+    @include onMobile {
+      font-size: 37px;
+      line-height: 60px;
+    }
+  }
+
+  .container-mobile {
+    display: none;
+
+    @include onMobile {
+      display: block;
+    }
+  }
+
+  &__image--mobile {
+    width: 100%;
+  }
+}

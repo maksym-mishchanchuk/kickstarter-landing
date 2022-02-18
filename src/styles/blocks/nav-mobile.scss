@@ -1,0 +1,43 @@
+@import "../utils/mixins";
+
+.nav-mobile {
+  z-index: 1;
+
+  @include onDeskTop {
+    display: none;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .container {
+    padding: 10px 30px;
+  }
+
+  &__closed {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: #333;
+    text-decoration: none;
+    padding: 4px;
+    border-radius: 5px;
+  }
+}

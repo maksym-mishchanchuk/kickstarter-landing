@@ -1,0 +1,136 @@
+@import "../utils/mixins";
+
+.header {
+  max-width: 1199px;
+  margin: 0 auto;
+
+  &__wrapper {
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1194px;
+    margin: 0 auto;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 34px;
+    margin-bottom: 32px;
+
+    @include onTablet {
+      padding: 27px 34px;
+      margin-bottom: 54px;
+    }
+
+    @include onMobile {
+      padding: 28px 30px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    padding-left: 34px;
+    margin: 0 auto 132px;
+
+    @include onTablet {
+      margin-bottom: 130px;
+    }
+
+    @include onMobile {
+      flex-direction: column-reverse;
+      padding: 0 30px;
+    }
+  }
+
+  &__text {
+    width: 378px;
+    margin-top: 81px;
+
+    @include onTablet {
+      width: 340px;
+      margin-top: 29px;
+    }
+
+    @include onMobile {
+      width: 100%;
+    }
+
+    &--h1 {
+      margin-bottom: 27px;
+      font-size: 64px;
+      font-family: DIN-pro, sans-serif;
+      line-height: 130%;
+      text-transform: uppercase;
+      color: #333;
+
+      @include onTablet {
+        font-size: 48px;
+        line-height: 130%;
+      }
+
+      @include onMobile {
+        margin-bottom: 23px;
+        text-align: center;
+        font-size: 44px;
+      }
+
+      @media (max-width: 319px) {
+        font-size: 37px;
+      }
+    }
+
+    &--paragraph {
+      display: block;
+      text-align: justify;
+      font-size: 16px;
+      line-height: 24px;
+      color: #333;
+
+      @include onMobile {
+        text-align: center;
+      }
+    }
+  }
+
+  &__photo-container__desktop {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    @include onMobile {
+      display: none;
+    }
+  }
+
+  &__image {
+
+    @include onTablet {
+      width: 739px;
+    }
+
+    @include onMobile {
+      display: none;
+    }
+  }
+
+  &__photo-container__mobile {
+    display: none;
+
+    @include onMobile {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  &__image--mobile {
+    width: 100%;
+  }
+}

@@ -1,0 +1,82 @@
+@import "../utils/mixins";
+
+.property {
+
+  &__block-2 {
+    margin-bottom: 129px;
+
+    @include onTablet {
+      margin-bottom: 76px;
+    }
+  }
+
+  @include onMobile {
+
+    &__block-2 {
+      display: none;
+    }
+
+    &__block-3 {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 34px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #0c797a;
+  }
+
+  &__list {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__item {
+    margin-bottom: 13px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333;
+  }
+}
+
+.grid__item {
+
+  &--desktop-6-9 {
+    grid-column: 6/10;
+  }
+
+  &--desktop-2-5 {
+    grid-column: 2/6;
+  }
+
+  &--desktop-4-6 {
+    grid-column: 4/7;
+  }
+
+  @include onTablet {
+    grid-template-columns: repeat(8,1fr);
+
+    &--tablet-4-7 {
+      grid-column: 4/8;
+    }
+
+    &--tablet-1-4 {
+      grid-column: 1/5;
+    }
+
+    &--tablet-3-6 {
+      grid-column: 3/7;
+    }
+  }
+
+  @include onMobile {
+    grid-template-columns: repeat(8,1fr);
+
+    &--tablet-4-7 {
+      grid-column: 1/5;
+    }
+  }
+}
